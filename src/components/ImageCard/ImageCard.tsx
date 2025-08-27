@@ -1,4 +1,4 @@
-import React from "react";
+import { ReactElement } from "react";
 
 interface ImageCardProps {
   imgUrl: string;
@@ -7,12 +7,12 @@ interface ImageCardProps {
   height?: number;
 }
 
-const ImageCard: React.FC<ImageCardProps> = ({
+function ImageCard({
   imgUrl,
   alt,
   width,
   height,
-}) => {
+}: ImageCardProps): ReactElement {
   return (
     <figure>
       <img
@@ -25,6 +25,6 @@ const ImageCard: React.FC<ImageCardProps> = ({
       />
     </figure>
   );
-};
+}
 
 export default ImageCard;
